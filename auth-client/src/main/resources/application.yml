@@ -1,0 +1,37 @@
+server:
+  port: 1001
+
+  session:
+    cookie:
+      name: APPSESSIONID
+
+security:
+  oauth2:
+    client:
+      user-authorization-uri: http://localhost:1000/oauth/authorize
+      access-token-uri: http://localhost:1000/oauth/token
+      client-id: xiaoyu
+      client-secret: xiaoyu
+      scope: read
+
+    resource:
+      user-info-uri: http://localhost:1000/user/info
+
+    sso:
+      login-path: /login
+
+  basic:
+    enabled: false
+
+  sessions: stateless
+
+
+
+
+
+
+
+
+
+
+
